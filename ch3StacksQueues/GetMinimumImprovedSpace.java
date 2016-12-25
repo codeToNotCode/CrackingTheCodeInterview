@@ -1,7 +1,11 @@
 /*
  *	To implement a special stack that has a getMin() function which return the minimum number present in the stack
  *	Time Complexity O(1)
- *	Space Complexity O(n) - beacuse we maintain an auxillary stack for the minimum number
+ *	Space Complexity : Its better than the normal algorithm as we do not add all the elements to the auxillary stack
+ *	Only those elements which are smaller than the previous stack element will be added to the auxillary stack
+ *	SO, for average case : number of elements in auxillary stack will always be less than that in the actual stack
+ *	In worst case, if elements are added in the decreasing order , then both the stacks will have the same number of elements
+ *	Hence, O(n) space complexity again
  */
 
 package ch3StacksQueues;
@@ -15,7 +19,7 @@ package ch3StacksQueues;
  * getMin() returns the minimum element present in the stack
  */
 
-class SpecialStack extends GetMinimum
+class AuxStack extends GetMinimumImprovedSpace
 {
 	/*
 	 * Object of the super class
@@ -48,12 +52,9 @@ class SpecialStack extends GetMinimum
 			
 			/*
 			 * If data is less than the current minimum element, push the new minimum(data) onto the auxillary stack
-			 * else put the minData element back to the auxillary stack as the new minimum
 			 */
-			if( data < minData )
+			if( data <= minData )
 				min.push(data);
-			else
-				min.push(minData);
 		}
 	}
 	
@@ -65,7 +66,11 @@ class SpecialStack extends GetMinimum
 	public int pop()
 	{
 		int poppedElement = pop();
-		min.pop();
+		int auxPop = min.pop();
+		
+		//Push the element popped from the Auxillary stack back only if it is not equal to the elements being popped from the orginal stack
+		if ( auxPop != poppedElement)
+			min.push(auxPop);
 		
 		return poppedElement;
 	}
@@ -84,7 +89,7 @@ class SpecialStack extends GetMinimum
 	
 }
 
-public class GetMinimum
+public class GetMinimumImprovedSpace
 {
 	public class Node
 	{
@@ -146,7 +151,7 @@ public class GetMinimum
 	//Driver Function
 	public static void main(String[] args) 
 	{
-		SpecialStack s = new SpecialStack();
+		AuxStack s = new AuxStack();
 		
 		s.push(10);
 		s.push(20);
