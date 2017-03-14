@@ -6,7 +6,7 @@
  * This method is works well for small numbers . But for very large numbers, Factorization is slow
  * 
  * Euclids Algorithm -  GCD of 42 and 90
- * divide 90 by 42 and note the quotient and remainder 90 = 2 ( 42 ) + 6
+ * divide 90 by 42 and note the  remainder 90 = 2 ( 42 ) + 6
  * GCD of 42 and 90 will be equal to GCD of 42 and 6 ... 42 = 7 ( 6 ) + 0
  * GCD of 42 and 90 will be equal to GCD of 6 and 0. Which is 6
  * Hence by Euclids Algorithm, GCD of 42 and 90 is 6 

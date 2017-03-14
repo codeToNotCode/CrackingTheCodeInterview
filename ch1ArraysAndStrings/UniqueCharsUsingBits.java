@@ -32,6 +32,7 @@ public class UniqueCharsUsingBits
 			 * If the character is not repeating:
 			 * Updates the checker variable by "ORing" it with the left shift on 1
 			 */
+			checker |= (1 << val);
 		}
 		
 		//If the loop completes without returning false, it means that all characters//If all the elements are 

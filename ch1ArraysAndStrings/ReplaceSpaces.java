@@ -18,7 +18,7 @@ public class ReplaceSpaces
 		while( str.charAt(j) == ' ')
 			j--;
 		
-		//To replace every black space with %20
+		//To replace every blank space with %20
 		for(int i = 0 ; i < j+1 ; i++ )
 		{
 			if( str.charAt(i) == ' ')

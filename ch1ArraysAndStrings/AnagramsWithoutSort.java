@@ -55,6 +55,6 @@ public class AnagramsWithoutSort
 	{
 		Anagrams angs = new Anagrams();
 		
-		System.out.println("Are the given two strings anagrams? \n"+(angs.areAnagrams("TOugh", "Ought")? "Yes":"No"));
+		System.out.println("Are the given two strings anagrams? \n"+(angs.areAnagrams("TOugd", "Ought")? "Yes":"No"));
 	}
 }

@@ -1,7 +1,7 @@
 /*
  *	To implement a special stack that has a getMin() function which return the minimum number present in the stack
  *	Time Complexity O(1)
- *	Space Complexity O(n) - beacuse we maintain an auxillary stack for the minimum number
+ *	Space Complexity O(n) - because we maintain an auxillary stack for the minimum number
  */
 
 package ch3StacksQueues;

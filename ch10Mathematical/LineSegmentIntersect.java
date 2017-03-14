@@ -7,7 +7,8 @@
  * 		B) Orientations of r,s,p and r,s,q are different
  * 
  * 2)SPECIAL CASE : If both the above orientations are same (0) , it means all the points line on the same line. 
- * 	Then will intersect if a point on one line segment lies on the other line segment. Four cases arise and lines will intersect if any one of the case evaluates to true:
+ * 	Then they will intersect if a point on one line segment lies on the other line segment. Four cases arise and 
+ *  lines will intersect if any one of the case evaluates to true:
  * 		A) Point r lies on the line segment pq
  *		B) Point s lies on the line segment pq
  *		C) Point p lies on the line segment rs 

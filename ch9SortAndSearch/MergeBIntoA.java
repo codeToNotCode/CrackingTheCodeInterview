@@ -41,7 +41,7 @@ public class MergeBIntoA
 		//return the sorted array
 		return A;
 	}
-	
+	 
 	
 	//Driver Function
 	public static void main(String[] args)

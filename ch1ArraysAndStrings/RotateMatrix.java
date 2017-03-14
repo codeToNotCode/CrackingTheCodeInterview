@@ -29,7 +29,7 @@ public class RotateMatrix
 			 */
 			for (int j = i; j < length-i; j++) 
 		      {
-		          //Store the values of 4 array variables into 4 different variables
+		          //Store the values of 4 corner array variables into 4 different variables
 		    	  int p1 = matrix[i][j];
 		    	  int p2 = matrix[j][length-i];
 		    	  int p3 = matrix[length-i][length-j];

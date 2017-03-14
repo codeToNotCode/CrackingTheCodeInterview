@@ -65,11 +65,12 @@ public class MathUsingAddOnly
 		int num1 = n1;
 		int num2 = n2;
 		
-		//Make both the numbers positive
-		if( num1 < 0 )
-			num1 = changeSign(num1);
-		if( num2 < 0 )
-			num2 = changeSign(num2);
+		/*
+		 * Make both the numbers positive
+		 * We are not using Math.abs() function here because we have to only use addition and nothing else
+		 */
+		num1 = abs(num1);
+		num2 = abs(num2);
 		
 		//Add num1 to itself num2 times
 		for(int i = 0 ; i < num2 ; i++)
@@ -140,7 +141,7 @@ public class MathUsingAddOnly
 		MathUsingAddOnly muao = new MathUsingAddOnly();
 		
 		System.out.println("Subtraction : "+muao.subtract(-9,-1));
-		System.out.println("Multiplication : "+muao.multiply(10,8));
+		System.out.println("Multiplication : "+muao.multiply(10,-8));
 		System.out.println("Division : "+muao.divide(10,5));
 	}
 }
