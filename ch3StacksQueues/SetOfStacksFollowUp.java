@@ -136,7 +136,7 @@ public class SetOfStacksFollowUp
 		//Return the popped element
 		return removed_item;
 	}
-	
+		
 	
 	//TO display all the stacks and their elements 
 	public void display()
